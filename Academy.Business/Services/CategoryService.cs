@@ -5,7 +5,7 @@ using Academy.DataAccess.Contexts;
 
 namespace Academy.Business.Services;
 
-public class CategoryService : ICategoryServices
+public class CategoryService : ICategoryService
 {
     public void Create(string? name, string description)
     {
@@ -43,5 +43,11 @@ public class CategoryService : ICategoryServices
         {
             Console.WriteLine($"id: {category.Id}; Category Name: {category.Name}");
         }
+    }
+
+    public Category? FindCategoryByName(string name)
+    {
+        if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
+        return AcademyDbContext.Categories.Find(c => c.Name.ToLower() == name.ToLower());
     }
 }

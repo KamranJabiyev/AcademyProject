@@ -2,7 +2,7 @@
 
 namespace Academy.Business.Interfaces;
 
-public interface ICategoryServices
+public interface ICategoryService
 {
     void Create(string? name, string description);
     /// <summary>
@@ -14,4 +14,5 @@ public interface ICategoryServices
     void ShowAll();
     Category GetCategory(int Id);
     void GetGroupIncluded(string name);
+    Category? FindCategoryByName(string name);
 }
