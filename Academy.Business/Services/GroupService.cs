@@ -48,7 +48,10 @@ public class GroupService : IGroupService
 
     public void ShowAll()
     {
-        throw new NotImplementedException();
+        foreach (var group in AcademyDbContext.Groups)
+        {
+            Console.WriteLine($"Id: {group.Id}; Group name:{group.Name}");
+        }
     }
 
     public void ShowAllStudents(string name)
