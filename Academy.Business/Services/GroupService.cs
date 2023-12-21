@@ -36,14 +36,15 @@ public class GroupService : IGroupService
         throw new NotImplementedException();
     }
 
-    public Group GetById(int id)
+    public Group? GetById(int id)
     {
         throw new NotImplementedException();
     }
 
-    public Group GetByName(string name)
+    public Group? GetByName(string name)
     {
-        throw new NotImplementedException();
+        if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
+        return AcademyDbContext.Groups.Find(g=>g.Name.ToLower()==name.ToLower());
     }
 
     public void ShowAll()

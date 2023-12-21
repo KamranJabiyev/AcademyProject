@@ -11,9 +11,14 @@ public class Student:IEntity
     public Group Group { get; set; }
     public bool IsDelete { get; set; }
     private static int _id;
-    public Student(string name)
+
+    public Student(string name, string surname, string email, Group group)
     {
         Id = _id++;
         Name = name;
+        Surname = surname;
+        Email = email;
+        Group = group;
+        IsDelete = false;
     }
 }
