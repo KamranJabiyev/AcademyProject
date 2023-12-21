@@ -1,0 +1,12 @@
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\bin\Debug\net6.0\Academy.Core.deps.json
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\bin\Debug\net6.0\Academy.Core.dll
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\bin\Debug\net6.0\Academy.Core.pdb
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\Academy.Core.csproj.AssemblyReference.cache
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\Academy.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\Academy.Core.AssemblyInfoInputs.cache
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\Academy.Core.AssemblyInfo.cs
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\Academy.Core.csproj.CoreCompileInputs.cache
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\Academy.Core.dll
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\refint\Academy.Core.dll
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\Academy.Core.pdb
+C:\Users\kamran.jabiyev\source\repos\Academy\Academy.Core\obj\Debug\net6.0\ref\Academy.Core.dll
