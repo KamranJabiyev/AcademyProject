@@ -7,6 +7,7 @@ public class Group:IEntity
     public int Id { get; }
     public string Name { get; set; }
     public int MaxStudentCount { get; set; }
+    public int CurrentStudentCount { get; set; }
     public Category Category { get; set; }
     public bool IsActive { get; set; }
     private static int _id;
