@@ -39,6 +39,9 @@ public class CategoryService : ICategoryServices
 
     public void ShowAll()
     {
-        throw new NotImplementedException();
+        foreach (var category in AcademyDbContext.Categories)
+        {
+            Console.WriteLine($"id: {category.Id}; Category Name: {category.Name}");
+        }
     }
 }
