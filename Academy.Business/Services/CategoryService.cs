@@ -7,7 +7,7 @@ namespace Academy.Business.Services;
 
 public class CategoryService : ICategoryService
 {
-    public void Create(string? name, string description)
+    public void Create(string? name, string? description)
     {
         if(String.IsNullOrEmpty(name)) throw new ArgumentNullException();
         Category? dbCategory=

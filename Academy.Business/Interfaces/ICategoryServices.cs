@@ -4,7 +4,7 @@ namespace Academy.Business.Interfaces;
 
 public interface ICategoryService
 {
-    void Create(string? name, string description);
+    void Create(string? name, string? description);
     /// <summary>
     /// If empty category
     /// </summary>

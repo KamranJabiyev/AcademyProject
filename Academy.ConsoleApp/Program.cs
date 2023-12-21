@@ -4,21 +4,65 @@ Console.WriteLine("Academy App Start:");
 CategoryService categoryService = new();
 StudentService studentService = new();
 GroupService groupService = new();
+bool isContinue = true;
+while (isContinue)
+{
+    Console.WriteLine("Choose the option:");
+    Console.WriteLine("1 - Create Category \n" +
+                      "2 - Show All Category \n" +
+                      "3 - Create Group \n" +
+                      "4 - Show All Group \n" +
+                      "5 - Create Student \n" +
+                      "0 - Exit");
 
-categoryService.Create("Programming", "safs");
-categoryService.Create("UX|UI", "safs");
-categoryService.Create("Digital Marketing", "safs");
-Console.WriteLine("All Categories:");
-categoryService.ShowAll();
-
-groupService.Create("P238", 4, "programming");
-Console.WriteLine("All Groups:");
-groupService.ShowAll();
-
-studentService.Create("Onur", "Eliyev", "oe@code.edu.az", "P238");
-studentService.Create("Onur", "Eliyev", "oe@code.edu.az", "P238");
-studentService.Create("Onur", "Eliyev", "oe@code.edu.az", "P238");
-studentService.Create("Onur", "Eliyev", "oe@code.edu.az", "P238");
-studentService.Create("Onur", "Eliyev", "oe@code.edu.az", "P238");
+    string? option=Console.ReadLine();
+    int optionNumber;
+    bool isInt=int.TryParse(option, out optionNumber);
+    if (isInt)
+    {
+        if(optionNumber >=0 && optionNumber <=5)
+        {
+            switch (optionNumber) 
+            { 
+                case 1:
+                    createCategory: try
+                    {
+                        Console.WriteLine("Enter Category Name:");
+                        string? categoryName = Console.ReadLine();
+                        Console.WriteLine("Enter Category Description:");
+                        string? categoryDesc = Console.ReadLine();
+                        categoryService.Create(categoryName, categoryDesc);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        goto createCategory;
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("All Category:");
+                    categoryService.ShowAll();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                default:
+                    isContinue = false;
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Please enter correct option number!");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Please enter correct format!");
+    }
+}
 
 
