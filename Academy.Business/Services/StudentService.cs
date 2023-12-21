@@ -17,8 +17,13 @@ public class StudentService : IStudentService
         if (String.IsNullOrEmpty(name)) throw new ArgumentNullException();
         Group? group = groupService.GetByName(groupName);
         if (group is null) throw new NotFoundException($"{groupName} is not exist");
+        if (group.MaxStudentCount == group.CurrentStudentCount)
+        {
+            throw new GroupIsFullException($"{group.Name} is already full");
+        }
         Student student = new(name,surname,email,group);
         AcademyDbContext.Students.Add(student);
+        group.CurrentStudentCount++;
     }
     public void ChangeGroup(int studentId, string newGroupName)
     {
