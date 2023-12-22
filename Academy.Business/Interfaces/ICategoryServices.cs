@@ -10,9 +10,13 @@ public interface ICategoryService
     /// </summary>
     /// <param name="name"></param>
     void Delete(string name);
-    void Activate(string name, bool isActive=false);
+    void Activate(string name);
     void ShowAll();
-    Category GetCategory(int Id);
+    void GetCategory(string name);
     void GetGroupIncluded(string name);
     Category? FindCategoryByName(string name);
+
+    //----------------------------------
+    bool IsCategoryExist();
+
 }

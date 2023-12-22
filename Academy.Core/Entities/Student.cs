@@ -9,7 +9,7 @@ public class Student:IEntity
     public string Surname { get; set; }
     public string Email { get; set; }
     public Group Group { get; set; }
-    public bool IsDelete { get; set; }
+    public bool IsDelete { get; set; } = false;
     private static int _id;
 
     public Student(string name, string surname, string email, Group group)

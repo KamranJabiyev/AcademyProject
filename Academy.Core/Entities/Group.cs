@@ -9,7 +9,7 @@ public class Group:IEntity
     public int MaxStudentCount { get; set; }
     public int CurrentStudentCount { get; set; }
     public Category Category { get; set; }
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
     private static int _id;
     public Group(string name, int maxStudentCount,Category category)
     {
